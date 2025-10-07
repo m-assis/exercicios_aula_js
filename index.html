@@ -8,39 +8,29 @@
 <body>
     <script>
 
-        /*
+        
         var nome = "Mike" //String
 
         var idade = 32
         alert("A idade dele é"+ idade)
         console.log("Bem-vindo" +nome+"!!!")
-        */
-
-        
-        /*
+    
         var n1 = 5
         var n2 = 7
         var resultado = n1 + n2
-
         console.log("O resultado é "+resultado)
-        */
-
-        /*
+        
         var numeroInteiro = 2;
         var nome = "JavaScript";
         var numeroReal = 2.25;
-        */
-
-        /* Calculos de média 
+               
         var notaP1 = prompt("Digite a nota da Prova 1");
         var notaP2 = prompt("Digite a nota da Prova 2");
         var media = (notaP1 + notaP2) / 2;
         alert("Media do aluno = "+media);
         console.log(media);
         var notaP1 = prompt("Digite a nota da Prova 1");
-        */
-
-        /*
+                
         var soma = 5 + 7;
         console.log(soma);
         
@@ -66,22 +56,18 @@
         var volta = 5;
         volta --
         console.log(volta);
-        */
-
-         /*
+    
+         
          var distancia = prompt("Digite a distância");
          var consumo = prompt("Qual o consumo do seu carro em k/1");
          var litros = distancia / consumo;
          console.log("serão gastos" +litros+ " litros de conbustivel na viagem");
-         */
-
-         /*
+         
          var nota1 = Number(prompt("Digite a primeira nota"));
          var nota2 = Number(prompt("Digite a segunda nota"));
          var resultado = (nota1 + nota2) / 2;
          console.log(resultado);
-         */
-
+        
          //Desafio 1
          var baseMaior = prompt("Informe a base maior");
          var baseMenor = prompt("Informe a base menor");
@@ -107,9 +93,64 @@
           alert("Foram consumidos "+ litros+" litros de combustivel");
 
 
+          //Novos Testes
 
+          // Concatenação
+          var str1 = 'Exemplo de String com aspas simples';
+          var str2 = "Exemplo de String com aspas duplas";
+          var str3 = 'Exemplo de String com acento grave; 
+  		  que permite escrevê-la em
+		  várias linhas;
 
-        
+          //Busca de palavras
+          var roteiro = "Olá! Estamos organizando um tour bem legal pelos principais pontos exóticos aqui em São Paulo. Vamos fazer um tour que possa durar um dia inteiro e temos a intenção de passar por pelo menos quatro lugares diferentes. O que eu pensei? Pensei, primeiro, em tomarmos um café lá no Mercado Municipal. Mas deve ser um café nervoso e parrudo, com direito a lanche de mortadela e tudo. Depois, pensamos em fazer uma corrida pela 25 de março, já que estamos ali pertinho. Pra quem quiser, dá pra comprar umas lembrancinhas bem baratas. Saindo dali, vamos passar pela Paulista e ver um dos principais centros nervosos da nossa cidade. Da Paulista é um pulo para o Parque do Ibirapuera, onde a gente pode dar uma passeada tranquila e, em seguida, descansar. Bora lá?";
+          var posicao = roteiro.search("Parque do Ibirapuera");
+          console.log(posicao);
+          roteiro.indexOf("palavra")
+          roteiro.indexOf("palavra", 50)
+
+          //Prefixos e Sufixos
+          var endereco = "Avenida Paulista, 875";
+          var resultado = endereco.startsWith("Av");
+          console.log(resultado); // o resultado será TRUE
+          var resultado = texto.endsWith("Paulista");
+          console.log(resultado); // o resultado será FALSE
+
+          //Subspalavras
+          var anuncio = "Chevrolet Cruze 1.0 Gasolina, Manual";
+          var modelo = anuncio.substring(10,14);
+          console.log(modelo);
+          var combustivel = anuncio.substr(20,8);
+          console.log(combustivel);
+
+          //Extração de conjunto de palvras
+          var textoCardapio = "hamburger;cheeseburger;misto-quente; cachorro-quente;hamburguer vegano;master blaster plus;mastodonte ultimate";
+          var listaDePalavras = textoCardapio.split(";"); //split
+          console.log(listaDePalavras);
+          console.log(listaDePalavras[6]);
+
+          // Substituindo Palavras
+          var modeloMSG = "Muito obrigado, **NOME**, por participar deste evento sensacional conosco. Nos vemos em breve!";
+          var seuNome = prompt("Digite seu nome para a Lista VIP");
+          var novaMsg = modeloMsg.replace("**NOME**",seuNome);
+
+          var modelo = "Vamos sair do **ORIGEM** para **DESTINO**. Só que vamos de **MEIO**, beleza?";
+          var lugarOrigem = "MASP";
+          var lugarDestino = "Museu do Ipiranga";
+          var meioTransporte = "Táxi";
+
+          var resultado = modelo.replace("**ORIGEM**", lugarOrigem)
+          .replace("**DESTINO**", lugarDestino)
+          .replace("**MEIO**", meioTransporte);
+          console.log(resultado);
+
+          //Substitundo (Especial)
+          var lugarOrigem = "MASP";
+          var lugarDestino = "Museu do Ipiranga";
+          var meioTransporte = "Táxi";
+          var novaString = 'Vamos sair do ${lugarOrigem} para ${lugarDestino}. Só que vamos de ${meioTransporte}, beleza?'
+          console.log(novaString);
+       
 
     </script>
 </body>
